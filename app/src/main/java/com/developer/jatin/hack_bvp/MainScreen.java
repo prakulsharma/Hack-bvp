@@ -140,7 +140,18 @@ Toolbar toolbar;
             startActivity(Intent.createChooser(sendIntent, "share"));
             toolbar.setBackgroundColor(Color.parseColor("#ff420e"));
 
+        }else if (id == R.id.location) {
+            toolbar.setTitle("Location");
+
+
+            Intent i = new Intent();
+            i.setClass(MainScreen.this,MapsActivity.class);
+            startActivity(i);
+
+
         }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
