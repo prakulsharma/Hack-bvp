@@ -24,7 +24,7 @@ import static com.developer.jatin.hack_bvp.R.id.center;
  * create an instance of this fragment.
  */
 public class Talks extends Fragment {
-    TextView publicspeaking_text,writing_text,python_text,maths_text;
+    TextView publicspeaking_text,writing_text,python_text,maths_text,prespeaking,prewriting,prepython,premaths;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -79,7 +79,101 @@ public class Talks extends Fragment {
         maths_text=(TextView)view.findViewById(R.id.text_basicmaths);
 
 
+       premaths=(TextView)view.findViewById(R.id.prerequistie_maths);
+        prepython=(TextView)view.findViewById(R.id.prerequistie_python);
+        prewriting=(TextView)view.findViewById(R.id.prerequistie_writing);
+        prespeaking=(TextView)view.findViewById(R.id.prerequistie_english_speaking);
 
+   premaths.setOnClickListener(new View.OnClickListener() {
+       @Override
+       public void onClick(View v) {
+           AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+           alert.setTitle("For maths");
+//                ImageView imageView=new ImageView(Links_activity.this);
+           TextView textView=new TextView(getActivity());
+           textView.setText("");
+           textView.setGravity(center);
+           textView.setPadding(20, 20, 20, 20);
+//                imageView.setBackgroundResource(R.drawable.android);
+
+           alert.setView(textView);
+           alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+               @Override
+               public void onClick(DialogInterface dialog, int id) {
+                   dialog.dismiss();
+               }
+           });
+           alert.show();
+       }
+   });
+
+        prepython.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+                alert.setTitle("For maths");
+//                ImageView imageView=new ImageView(Links_activity.this);
+                TextView textView=new TextView(getActivity());
+                textView.setText("");
+                textView.setGravity(center);
+                textView.setPadding(20, 20, 20, 20);
+//                imageView.setBackgroundResource(R.drawable.android);
+
+                alert.setView(textView);
+                alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+                alert.show();
+            }
+        });
+
+        prewriting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+                alert.setTitle("For maths");
+//                ImageView imageView=new ImageView(Links_activity.this);
+                TextView textView=new TextView(getActivity());
+                textView.setText("");
+                textView.setGravity(center);
+                textView.setPadding(20, 20, 20, 20);
+//                imageView.setBackgroundResource(R.drawable.android);
+
+                alert.setView(textView);
+                alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+                alert.show();
+            }
+        });
+        prespeaking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+                alert.setTitle("For maths");
+//                ImageView imageView=new ImageView(Links_activity.this);
+                TextView textView=new TextView(getActivity());
+                textView.setText("");
+                textView.setGravity(center);
+                textView.setPadding(20, 20, 20, 20);
+//                imageView.setBackgroundResource(R.drawable.android);
+
+                alert.setView(textView);
+                alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+                alert.show();
+            }
+        });
         publicspeaking_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
