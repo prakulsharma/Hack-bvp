@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static com.developer.jatin.hack_bvp.R.id.center;
 
@@ -91,7 +92,7 @@ public class Talks extends Fragment {
            alert.setTitle("For maths");
 //                ImageView imageView=new ImageView(Links_activity.this);
            TextView textView=new TextView(getActivity());
-           textView.setText("");
+           textView.setText("Basic knowledge of trigonometry");
            textView.setGravity(center);
            textView.setPadding(20, 20, 20, 20);
 //                imageView.setBackgroundResource(R.drawable.android);
@@ -111,10 +112,10 @@ public class Talks extends Fragment {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
-                alert.setTitle("For maths");
+                alert.setTitle("For python");
 //                ImageView imageView=new ImageView(Links_activity.this);
                 TextView textView=new TextView(getActivity());
-                textView.setText("");
+                textView.setText("Nothing required");
                 textView.setGravity(center);
                 textView.setPadding(20, 20, 20, 20);
 //                imageView.setBackgroundResource(R.drawable.android);
@@ -134,10 +135,10 @@ public class Talks extends Fragment {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
-                alert.setTitle("For maths");
+                alert.setTitle("For writting");
 //                ImageView imageView=new ImageView(Links_activity.this);
                 TextView textView=new TextView(getActivity());
-                textView.setText("");
+                textView.setText("English required");
                 textView.setGravity(center);
                 textView.setPadding(20, 20, 20, 20);
 //                imageView.setBackgroundResource(R.drawable.android);
@@ -156,10 +157,10 @@ public class Talks extends Fragment {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
-                alert.setTitle("For maths");
+                alert.setTitle("For speaking");
 //                ImageView imageView=new ImageView(Links_activity.this);
                 TextView textView=new TextView(getActivity());
-                textView.setText("");
+                textView.setText("Knowledge of english is required");
                 textView.setGravity(center);
                 textView.setPadding(20, 20, 20, 20);
 //                imageView.setBackgroundResource(R.drawable.android);
@@ -197,6 +198,12 @@ public class Talks extends Fragment {
                         dialog.dismiss();
                     }
                 });
+                alert.setPositiveButton("Share", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
+                    }
+                });
                 alert.show();
             }
         });
@@ -219,6 +226,12 @@ public class Talks extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.dismiss();
+                    }
+                });
+                alert.setPositiveButton("Share", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
                     }
                 });
                 alert.show();
@@ -245,6 +258,12 @@ public class Talks extends Fragment {
                         dialog.dismiss();
                     }
                 });
+                alert.setPositiveButton("Share", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
+                    }
+                });
                 alert.show();
             }
         });
@@ -265,6 +284,12 @@ public class Talks extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.dismiss();
+                    }
+                });
+                alert.setPositiveButton("Share", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
                     }
                 });
                 alert.show();

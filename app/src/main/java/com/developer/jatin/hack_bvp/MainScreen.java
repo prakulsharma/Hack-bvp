@@ -1,6 +1,7 @@
 package com.developer.jatin.hack_bvp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -102,10 +103,6 @@ Toolbar toolbar;
             fragmentManager.beginTransaction().replace(R.id.app_bar,talks,talks.getTag()).commit();
 
             // Handle the camea action
-        } else if (id == R.id.proposals) {
-            toolbar.setTitle("Proposals");
-            toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
-
         } else if (id == R.id.form) {
             toolbar.setTitle("Form");
             toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
@@ -116,6 +113,16 @@ Toolbar toolbar;
 
         } else if (id == R.id.up_coming_talks) {
             toolbar.setTitle("Upcoming Talks");
+            toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
+
+        } else if (id == R.id.nav_share) {
+            toolbar.setTitle("share");
+
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "share with friends");
+            sendIntent.setType("text/plain");
+            startActivity(Intent.createChooser(sendIntent, "share"));
             toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
 
         }
