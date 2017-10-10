@@ -3,9 +3,12 @@ package com.developer.jatin.hack_bvp;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
+import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static com.developer.jatin.hack_bvp.R.id.center;
+import static com.developer.jatin.hack_bvp.R.id.toolbar;
 
 
 /**
@@ -201,7 +205,15 @@ public class Talks extends Fragment {
                 alert.setPositiveButton("Share", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
+
+                        Intent sendIntent = new Intent();
+                        sendIntent.setAction(Intent.ACTION_SEND);
+                        sendIntent.putExtra(Intent.EXTRA_TEXT, "share with friends");
+                        sendIntent.setType("text/plain");
+                        startActivity(Intent.createChooser(sendIntent, "share"));
+//                        toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
+
+//                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
                     }
                 });
                 alert.show();
@@ -231,7 +243,15 @@ public class Talks extends Fragment {
                 alert.setPositiveButton("Share", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
+
+                        Intent sendIntent = new Intent();
+                        sendIntent.setAction(Intent.ACTION_SEND);
+                        sendIntent.putExtra(Intent.EXTRA_TEXT, "share with friends");
+                        sendIntent.setType("text/plain");
+                        startActivity(Intent.createChooser(sendIntent, "share"));
+//                        toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
+
                     }
                 });
                 alert.show();
@@ -261,7 +281,15 @@ public class Talks extends Fragment {
                 alert.setPositiveButton("Share", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
+
+                        Intent sendIntent = new Intent();
+                        sendIntent.setAction(Intent.ACTION_SEND);
+                        sendIntent.putExtra(Intent.EXTRA_TEXT, "share with friends");
+                        sendIntent.setType("text/plain");
+                        startActivity(Intent.createChooser(sendIntent, "share"));
+//                        toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
+
                     }
                 });
                 alert.show();
@@ -289,7 +317,14 @@ public class Talks extends Fragment {
                 alert.setPositiveButton("Share", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(getActivity(),"Post shared",Toast.LENGTH_SHORT).show();
+
+                        Intent sendIntent = new Intent();
+                        sendIntent.setAction(Intent.ACTION_SEND);
+                        sendIntent.putExtra(Intent.EXTRA_TEXT, "share with friends");
+                        sendIntent.setType("text/plain");
+                        startActivity(Intent.createChooser(sendIntent, "share"));
+//                        toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
+
                     }
                 });
                 alert.show();
