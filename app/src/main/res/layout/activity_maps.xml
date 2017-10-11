@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1"
-    android:text="Address\nC-4 Janak Puri, New Delhi-110058 \n Email \n director@msit.in"
+    android:text="Address : \nC-4 Janak Puri, New Delhi-110058 \n Email : john@msit.in\nPhone : 23456789"
 
     android:gravity="center"
     android:textSize="20dp"
